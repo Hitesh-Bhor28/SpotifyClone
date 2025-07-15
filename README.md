@@ -1,5 +1,8 @@
-
 # Spotify Clone 🎵
+
+## ✨ Screenshots
+### Home Page
+![Home](assets/home.png)
 
 ## 📝 Description
 A frontend clone of Spotify built using HTML, CSS, and JavaScript. It mimics the core UI and playback features of the Spotify web player.
@@ -29,10 +32,6 @@ git clone https://github.com/Hitesh-Bhor28/SpotifyClone.git
 cd SpotifyClone
 Open index.html in your browser
 ```
-
-## ✨ Screenshots
-### Home Page
-![Home](assets/home.png)
 
 ## 📌 Future Improvements
 - Add volume control
