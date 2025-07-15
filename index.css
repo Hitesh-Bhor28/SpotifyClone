@@ -223,15 +223,44 @@ margin-right: 1rem;
 }
 
 .album{
-    width: 25%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
 }
+
+
+.track-img{
+    height: 56px;
+    width: 56px;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.track-info{
+    margin: 0rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.track-title {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.track-desc {
+    margin-top: -12px;
+    font-size: 0.8rem;
+    opacity: 0.8px;
+
+}
+/* Player Center */
 
 .player{
-    width: 50%;
-}
-
-.controls{
-    width: 25%;
+    flex: 1;
 }
 
 .player-controls{
@@ -242,7 +271,7 @@ margin-right: 1rem;
 
 .player-control-icon{
     height: 1rem;
-    margin-right: 1.75rem;
+    margin-right: 1rem;
     opacity: 0.7;
 }
 
@@ -256,24 +285,162 @@ margin-right: 1rem;
     align-items: center;
 }
 
-.progress-bar{
-    width: 70%;
-    appearance: none;
-    background-color: transparent;
+.progress-bar {
+    width: 85%;
+    appearance: none; /* Works for most modern browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
     cursor: pointer;
 }
 
-.progress-bar::-webkit-slider-runnable-track{
+/* Chrome & Safari */
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #1bd760;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar:hover::-webkit-slider-runnable-track {
+    background-color: #ddd; /* Spotify green */
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-top: -6px; /* Aligns with track */
+    border: none;
+    opacity: 1;
+}
+.progress-bar:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+/* Firefox */
+.progress-bar::-moz-range-track {
     background-color: #ddd;
     border-radius: 100px;
     height: 0.2rem;
 }
-.progress-bar::-webkit-slider-thumb{
-    appearance: none;
+
+.progress-bar::-moz-range-thumb {
     height: 1rem;
     width: 1rem;
     background-color: #1bd760;
     border-radius: 50%;
-    margin-top: -6px;
+    border: none;
+}
 
+/* Internet Explorer / Edge Legacy */
+.progress-bar::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    height: 0.2rem;
+}
+
+.progress-bar::-ms-fill-lower {
+    background-color: #ddd;
+    border-radius: 100px;
+}
+
+.progress-bar::-ms-fill-upper {
+    background-color: #ddd;
+    border-radius: 100px;
+}
+
+.progress-bar::-ms-thumb {
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    border: none;
+}
+
+
+/* Player End */
+
+.controls{
+    width: 30%;
+}
+
+.control-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-icon-img1{
+    height: 2.2rem;
+    margin-right: 1rem;
+    opacity: 0.6;
+}
+
+.control-icon-img2{
+    height: 2.2rem;
+    margin-right: 1rem;
+    opacity: 0.8;
+}
+
+.control-icon-img3{
+    height: 1.2rem;
+    margin-right: 1rem;
+    opacity: 0.6;
+}
+
+.control-icon-img4{
+    height: 1rem;
+    margin-right: 1rem;
+    opacity: 0.6;
+}
+
+.control-icon-img5{
+    height: 2.5rem;
+    margin-right: 1rem;
+    opacity: 0.8;
+}
+
+.control-icon-img6{
+    height: 2.2rem;
+    margin-right: 1rem;
+    opacity: 0.6;
+}
+
+.control-icon-img:hover{
+    opacity: 1;
+}
+
+.vol-progress-bar {
+    width: 25;
+    appearance: none; /* Works for most modern browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Chrome & Safari */
+.vol-progress-bar::-webkit-slider-runnable-track {
+    background-color: #1bd760;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.vol-progress-bar:hover::-webkit-slider-runnable-track {
+    background-color: #ddd; /* Spotify green */
+}
+
+.vol-progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-top: -6px; /* Aligns with track */
+    border: none;
+    opacity: 1;
+}
+.vol-progress-bar:hover::-webkit-slider-thumb {
+    opacity: 1;
 }
