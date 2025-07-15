@@ -1,6 +1,4 @@
 # Spotify Clone 🎵
-
-## ✨ Screenshots
 ### Home Page
 ![Home](assets/home.png)
 
